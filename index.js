@@ -1,12 +1,18 @@
 "use strict";
-var num1;
-var num2;
-var add = function (num1, num2) {
-    return num1 + num2;
-};
-var subtract = function (num1, num2) {
-    return num1 - num2;
-};
-num1 = 5;
-num2 = 7;
-console.log(add(num1, num2));
+function insert(value) {
+    document.getElementById("text").value = document.getElementById("text").value + value;
+}
+function equal() {
+    var result = document.getElementById("text").value;
+    if (result != "") {
+        document.getElementById("text").value = eval(result);
+        var historyList = (document.getElementById("historyValues"));
+        var create = document.createElement("ul");
+        create.appendChild(document.createTextNode(result + " = " + eval(result)));
+        historyList === null || historyList === void 0 ? void 0 : historyList.appendChild(create);
+        document.getElementById("text").value = "";
+    }
+    else {
+        alert("No value!");
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="index.js" type="text/javascript"> //no content </script>
+    <title>Calculator</title>
+
+    <style>
+        input{
+            width: 150px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 10px 20px; padding: 20px; width: 300px; float: left;">
+        <input id="text" disabled>
+        <br>
+        <button value="1" onclick="insert(1)">1</button>
+        <button value="2" onclick="insert(2)">2</button>
+        <button value="3" onclick="insert(3)">3</button>
+        <br>
+        <button value="4" onclick="insert(4)">4</button>
+        <button value="5" onclick="insert(5)">5</button>
+        <button value="6" onclick="insert(6)">6</button>
+        <br>
+        <button value="7" onclick="insert(7)">7</button>
+        <button value="8" onclick="insert(8)">8</button>
+        <button value="9" onclick="insert(9)">9</button>
+        <br>
+        <button value="0" onclick="insert(0)">0</button>
+        <button value="+" onclick="insert('+')">+</button>
+        <button value="-" onclick="insert('-')">-</button>
+        <br>
+        <button value="/" onclick="insert('/')">/</button>
+        <button value="*" onclick="insert('*')">*</button>
+        <button value="%" onclick="insert('%')">%</button>
+        <br>
+        <button value="=" onclick="equal()" style="width: 159px;margin-top: 10px;">=</button>
+    </div>
+    <div style="margin: 10px 20px; padding: 20px; float: center;">
+        <h3>History</h3>
+        <ul id="historyValues">
+        </ul>
+    </div>
+
+    <script src="index.js" type="text/javascript"> //no content </script>
+</body>
+
+</html>
